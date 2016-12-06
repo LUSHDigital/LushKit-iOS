@@ -14,6 +14,8 @@
 		24F7ACFD1DF725EF00EF4DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */; };
 		24F7AD081DF725EF00EF4DF7 /* LushKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD071DF725EF00EF4DF7 /* LushKitTests.swift */; };
 		24F7AD131DF725EF00EF4DF7 /* LushKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD121DF725EF00EF4DF7 /* LushKitUITests.swift */; };
+		24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD201DF7268A00EF4DF7 /* Constants.swift */; };
+		24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		24F7AD0E1DF725EF00EF4DF7 /* LushKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LushKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7AD121DF725EF00EF4DF7 /* LushKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LushKitUITests.swift; sourceTree = "<group>"; };
 		24F7AD141DF725EF00EF4DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24F7AD201DF7268A00EF4DF7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Factory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */,
 				24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */,
+				24F7AD201DF7268A00EF4DF7 /* Constants.swift */,
+				24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */,
 				24F7ACF61DF725EF00EF4DF7 /* Main.storyboard */,
 				24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */,
 				24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */,
@@ -264,6 +270,8 @@
 			files = (
 				24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */,
 				24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */,
+				24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */,
+				24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
