@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */; };
 		24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */; };
-		24F7ACF81DF725EF00EF4DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F7ACF61DF725EF00EF4DF7 /* Main.storyboard */; };
 		24F7ACFA1DF725EF00EF4DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */; };
 		24F7ACFD1DF725EF00EF4DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */; };
 		24F7AD081DF725EF00EF4DF7 /* LushKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD071DF725EF00EF4DF7 /* LushKitTests.swift */; };
 		24F7AD131DF725EF00EF4DF7 /* LushKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD121DF725EF00EF4DF7 /* LushKitUITests.swift */; };
 		24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD201DF7268A00EF4DF7 /* Constants.swift */; };
 		24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */; };
+		24F7AD331DFEC0DC00EF4DF7 /* LushHandwritten_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD2F1DFEC0DC00EF4DF7 /* LushHandwritten_Bd.otf */; };
+		24F7AD341DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD301DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf */; };
+		24F7AD351DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD311DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf */; };
+		24F7AD361DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD321DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		24F7ACEF1DF725EF00EF4DF7 /* LushKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LushKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24F7ACF71DF725EF00EF4DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24F7ACFC1DF725EF00EF4DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24F7ACFE1DF725EF00EF4DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		24F7AD141DF725EF00EF4DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F7AD201DF7268A00EF4DF7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Factory.swift"; sourceTree = "<group>"; };
+		24F7AD2F1DFEC0DC00EF4DF7 /* LushHandwritten_Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_Bd.otf; path = Resources/Fonts/LushHandwritten_Bd.otf; sourceTree = "<group>"; };
+		24F7AD301DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_Rg.otf; path = Resources/Fonts/LushHandwritten_Rg.otf; sourceTree = "<group>"; };
+		24F7AD311DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_WLat_Bd.otf; path = Resources/Fonts/LushHandwritten_WLat_Bd.otf; sourceTree = "<group>"; };
+		24F7AD321DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_WLat_Rg.otf; path = Resources/Fonts/LushHandwritten_WLat_Rg.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +111,10 @@
 				24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */,
 				24F7AD201DF7268A00EF4DF7 /* Constants.swift */,
 				24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */,
-				24F7ACF61DF725EF00EF4DF7 /* Main.storyboard */,
+				24F7AD241DF9D42500EF4DF7 /* Buttons */,
 				24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */,
 				24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */,
+				24F7AD251DFEC03500EF4DF7 /* Resources */,
 				24F7ACFE1DF725EF00EF4DF7 /* Info.plist */,
 			);
 			path = LushKit;
@@ -129,6 +136,32 @@
 				24F7AD141DF725EF00EF4DF7 /* Info.plist */,
 			);
 			path = LushKitUITests;
+			sourceTree = "<group>";
+		};
+		24F7AD241DF9D42500EF4DF7 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		24F7AD251DFEC03500EF4DF7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24F7AD261DFEC08000EF4DF7 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		24F7AD261DFEC08000EF4DF7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				24F7AD2F1DFEC0DC00EF4DF7 /* LushHandwritten_Bd.otf */,
+				24F7AD301DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf */,
+				24F7AD311DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf */,
+				24F7AD321DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,9 +274,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F7AD351DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf in Resources */,
+				24F7AD341DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf in Resources */,
 				24F7ACFD1DF725EF00EF4DF7 /* LaunchScreen.storyboard in Resources */,
 				24F7ACFA1DF725EF00EF4DF7 /* Assets.xcassets in Resources */,
-				24F7ACF81DF725EF00EF4DF7 /* Main.storyboard in Resources */,
+				24F7AD331DFEC0DC00EF4DF7 /* LushHandwritten_Bd.otf in Resources */,
+				24F7AD361DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +343,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		24F7ACF61DF725EF00EF4DF7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24F7ACF71DF725EF00EF4DF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -522,6 +550,7 @@
 				24F7AD191DF725EF00EF4DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24F7AD1A1DF725EF00EF4DF7 /* Build configuration list for PBXNativeTarget "LushKitTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +559,7 @@
 				24F7AD1C1DF725EF00EF4DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24F7AD1D1DF725EF00EF4DF7 /* Build configuration list for PBXNativeTarget "LushKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +568,7 @@
 				24F7AD1F1DF725EF00EF4DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
