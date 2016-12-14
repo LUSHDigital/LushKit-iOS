@@ -1,12 +1,15 @@
 PODS:
+  - AutoLayoutHelperSwift (1.0.2)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
+  - AutoLayoutHelperSwift (~> 1.0.2)
   - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
+  AutoLayoutHelperSwift: 61d0bb3d246937b074e79d1b0829c2812eea7819
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 24494d918bece80e95398cb8f1778c0e328a78ca
+PODFILE CHECKSUM: 204af54eafdff2e1acc11caa70cb14f642040b4d
 
 COCOAPODS: 1.0.1

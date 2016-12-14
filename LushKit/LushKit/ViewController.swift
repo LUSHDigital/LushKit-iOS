@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import CoreGraphics
+import AutoLayoutHelperSwift
 
 class ViewController: UIViewController {
     
     var scrollView: UIScrollView!
     var contentView: UIView!
+    var colorViews = [UIView]()
+    var colorLabels = [UILabel]()
     var fontLabels = [UILabel]()
 
     override func viewDidLoad() {
@@ -19,6 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         view.backgroundColor = .white
+        automaticallyAdjustsScrollViewInsets = false
         
         scrollView = UIScrollView(frame: CGRect.zero)
         view.addSubview(scrollView)
@@ -26,9 +31,36 @@ class ViewController: UIViewController {
         contentView = UIView(frame: CGRect.zero)
         scrollView.addSubview(contentView)
         
+        addColorViewsAndLabels()
         addFontLabels()
         
         addConstraints()
+    }
+    
+    func addColorViewsAndLabels() {
+        
+        let colors: [UIColor] = [.lushBlack, .lushDarkGray, .lushWhite, .lushMediumGray, .lushVeryLightGray, .lushLightGray, .lushGreen, .lushRed]
+        let colorStrings = [kLushBlackHexString, kLushDarkGrayHexString, kLushWhiteHexString, kLushMediumGrayHexString, kLushVeryLightGrayHexString, kLushLightGrayHexString, kLushGreenHexString, kLushRedHexString]
+        
+        for (index, string) in colorStrings.enumerated() {
+            
+            let view = UIView(frame: CGRect.zero)
+            view.backgroundColor = colors[index]
+            if view.backgroundColor == .lushWhite {
+                
+                // add border
+                view.layer.borderColor = UIColor.lushLightGray.cgColor
+                view.layer.borderWidth = 1.0
+            }
+            colorViews.append(view)
+            contentView.addSubview(view)
+            
+            let label = UILabel(frame: CGRect.zero)
+            label.font = UIFont.miniBodyCopyFont
+            label.text = string
+            colorLabels.append(label)
+            contentView.addSubview(label)
+        }
     }
     
     func addFontLabels() {
@@ -59,10 +91,101 @@ class ViewController: UIViewController {
     func addConstraints() {
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraints([NSLayoutConstraint(item: scrollView, attribute: .top, relatedBy: .equal, toItem: scrollView.superview, attribute: .top, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: scrollView, attribute: .leading, relatedBy: .equal, toItem: scrollView.superview, attribute: .leading, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: scrollView, attribute: .trailing, relatedBy: .equal, toItem: scrollView.superview, attribute: .trailing, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: scrollView, attribute: .bottom, relatedBy: .equal, toItem: scrollView.superview, attribute: .bottom, multiplier: 1.0, constant: 0.0)])
+        scrollView.addTopConstraint(toView: scrollView.superview, attribute: .top, relation: .equal, constant: 0)
+        scrollView.addLeadingConstraint(toView: scrollView.superview, attribute: .leading, relation: .equal, constant: 0)
+        scrollView.addTrailingConstraint(toView: scrollView.superview, attribute: .trailing, relation: .equal, constant: 0)
+        scrollView.addBottomConstraint(toView: scrollView.superview, attribute: .bottom, relation: .equal, constant: 0)
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraints([NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: contentView.superview, attribute: .top, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: contentView, attribute: .leading, relatedBy: .equal, toItem: contentView.superview, attribute: .leading, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: contentView, attribute: .trailing, relatedBy: .equal, toItem: contentView.superview, attribute: .trailing, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: contentView, attribute: .bottom, relatedBy: .equal, toItem: contentView.superview, attribute: .bottom, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: contentView.superview, attribute: .width, multiplier: 1.0, constant: 0.0)])
+        contentView.fillSuperView()
+        contentView.addWidthConstraint(toView: scrollView)
+        
+        // color views and labels
+        
+        for (index, view) in colorViews.enumerated() {
+            
+            let label = colorLabels[index] // color label corresponding to the color view
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+            label.translatesAutoresizingMaskIntoConstraints = false
+            
+            // all labels should be pinned to their color view and its leading edge
+            
+            label.addTopConstraint(toView: view, attribute: .bottom, relation: .equal, constant: kHalfMargin)
+            label.addLeadingConstraint(toView: view, attribute: .leading, relation: .equal, constant: 0)
+            
+            // set view width to be same as that of the first view so all are equal 
+            
+            if index != 0 {
+                
+                view.addWidthConstraint(toView: colorViews.first!)
+            }
+            
+            // set view height and width to be equal
+            
+            contentView.addConstraint(NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0))
+            
+            // display in rows of 2 with corresponding label left aligned below each view
+            
+            if (index % 2) == 0 {
+                
+                // even index
+                
+                view.addLeadingConstraint(toView: view.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
+                
+                if index == 0 {
+                    
+                    // top row so pin to top of superview
+                    
+                    view.addTopConstraint(toView: view.superview, attribute: .top, relation: .equal, constant: kDoubleMargin)
+                } else {
+                    
+                    // pin to bottom of label from the row above
+                    
+                    let aboveLabel = colorLabels[index - 2]
+                    view.addTopConstraint(toView: aboveLabel, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
+                }
+                
+            } else {
+                
+                // odd index
+                
+                let previousView = colorViews[index - 1]
+                
+                view.addLeadingConstraint(toView: previousView, attribute: .trailing, relation: .equal, constant: kDefaultMargin)
+                view.addTrailingConstraint(toView: view.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
+            }
+            
+            // add top constraint
+            
+            if index < 2 {
+                
+                // top row so pin to top of superview
+                
+                view.addTopConstraint(toView: view.superview, attribute: .top, relation: .equal, constant: kDoubleMargin)
+            } else {
+                
+                // pin to bottom of label from the row above
+                
+                let aboveLabel = colorLabels[index - 2]
+                view.addTopConstraint(toView: aboveLabel, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
+            }
+        }
+        
+        // add bottom constraint to bottom row labels
+        
+        let lastLabel = colorLabels.last!
+        lastLabel.addBottomConstraint(toView: fontLabels.first!, attribute: .top, relation: .equal, constant: -kDoubleMargin)
+        
+        if colorViews.count % 2 == 0 {
+            
+            // even number of views, so second to last view on bottom row as well
+            
+            let penultimateLabel = colorLabels[colorLabels.count - 2]
+            penultimateLabel.addBottomConstraint(toView: fontLabels.first!, attribute: .top, relation: .equal, constant: -kDoubleMargin)
+        }
+        
+        // font labels
         
         for (index, label) in fontLabels.enumerated() {
             
@@ -72,13 +195,13 @@ class ViewController: UIViewController {
                 
                 // first label: add top constraint
                 
-                contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: label.superview, attribute: .top, multiplier: 1.0, constant: kDoubleMargin))
+                label.addTopConstraint(toView: colorLabels.last, attribute: .bottom, relation: .equal, constant: kDoubleMargin)
                 
                 if fontLabels.count == 1 {
                     
                     // only one label: add bottom constraint
                     
-                    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: label.superview, attribute: .bottom, multiplier: 1.0, constant: kDoubleMargin))
+                    label.addBottomConstraint(toView: label.superview, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
                 }
                 
             } else if index == (fontLabels.count - 1) {
@@ -91,19 +214,19 @@ class ViewController: UIViewController {
                     
                     // only one label
                     
-                    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: label.superview, attribute: .top, multiplier: 1.0, constant: kDoubleMargin))
+                    label.addTopConstraint(toView: colorLabels.last, attribute: .bottom, relation: .equal, constant: kDoubleMargin)
                 } else {
                     
                     // multiple labels
                     
                     let previousLabel = fontLabels[index - 1]
                     
-                    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: previousLabel, attribute: .bottom, multiplier: 1.0, constant: kDoubleMargin))
+                    label.addTopConstraint(toView: previousLabel, attribute: .bottom, relation: .equal, constant: kDoubleMargin)
                 }
                 
                 // add bottom constraint
                 
-                contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: label.superview, attribute: .bottom, multiplier: 1.0, constant: kDoubleMargin))
+                label.addBottomConstraint(toView: label.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
                 
             } else {
                 
@@ -111,12 +234,13 @@ class ViewController: UIViewController {
                 
                 let previousLabel = fontLabels[index - 1]
                 
-                contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: previousLabel, attribute: .bottom, multiplier: 1.0, constant: kDoubleMargin))
+                label.addTopConstraint(toView: previousLabel, attribute: .bottom, relation: .equal, constant: kDoubleMargin)
             }
             
             // apply leading and trailing constraints to all labels
             
-            contentView.addConstraints([NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: label.superview, attribute: .leading, multiplier: 1.0, constant: kDefaultMargin), NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: label.superview, attribute: .trailing, multiplier: 1.0, constant: -kDefaultMargin)])
+            label.addLeadingConstraint(toView: label.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
+            label.addTrailingConstraint(toView: label.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
         }
     }
     

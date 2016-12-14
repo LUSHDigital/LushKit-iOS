@@ -11,14 +11,14 @@ import UIColor_Hex_Swift
 
 
 // constants
-private let kLushBlackHexString             = "#0000000"
-private let kLushDarkGrayHexString          = "#333333"
-private let kLushWhiteHexString             = "#FFFFFFF"
-private let kLushMediumGrayHexString        = "#8F8F8F"
-private let kLushLightGrayHexString         = "#CECECE"
-private let kLushVeryLightGrayHexString     = "#EAEAEA"
-private let kLushGreenHexString             = "#00A44C"
-private let kLushRedHexString               = "#D0021B"
+let kLushBlackHexString             = "#000000"
+let kLushDarkGrayHexString          = "#333333"
+let kLushWhiteHexString             = "#FFFFFFF"
+let kLushMediumGrayHexString        = "#8F8F8F"
+let kLushLightGrayHexString         = "#CECECE"
+let kLushVeryLightGrayHexString     = "#EAEAEA"
+let kLushGreenHexString             = "#00A44C"
+let kLushRedHexString               = "#D0021B"
 
 public extension UIColor {
     
