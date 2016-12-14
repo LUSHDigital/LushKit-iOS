@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */; };
 		24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */; };
 		24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */; };
 		24F7ACFA1DF725EF00EF4DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */; };
@@ -19,6 +20,9 @@
 		24F7AD341DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD301DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf */; };
 		24F7AD351DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD311DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf */; };
 		24F7AD361DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24F7AD321DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf */; };
+		2523D342EA1BBF92F8CE23EE /* Pods_LushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D5CED2EB9D7A263248BBC /* Pods_LushKit.framework */; };
+		A956B4E9773D0E76CEA5C9CF /* Pods_LushKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69D9CEE636927600DB4267 /* Pods_LushKitTests.framework */; };
+		D45D92E435832DEDAF051CDC /* Pods_LushKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAD1816A0B7D4AAC3AB2278 /* Pods_LushKitUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Factory.swift"; sourceTree = "<group>"; };
 		24F7ACEF1DF725EF00EF4DF7 /* LushKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LushKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +62,15 @@
 		24F7AD301DFEC0DC00EF4DF7 /* LushHandwritten_Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_Rg.otf; path = Resources/Fonts/LushHandwritten_Rg.otf; sourceTree = "<group>"; };
 		24F7AD311DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_WLat_Bd.otf; path = Resources/Fonts/LushHandwritten_WLat_Bd.otf; sourceTree = "<group>"; };
 		24F7AD321DFEC0DC00EF4DF7 /* LushHandwritten_WLat_Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LushHandwritten_WLat_Rg.otf; path = Resources/Fonts/LushHandwritten_WLat_Rg.otf; sourceTree = "<group>"; };
+		3342BC35AFA49148995BD0EF /* Pods-LushKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LushKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LushKit/Pods-LushKit.debug.xcconfig"; sourceTree = "<group>"; };
+		3A69D9CEE636927600DB4267 /* Pods_LushKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LushKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		479D5CED2EB9D7A263248BBC /* Pods_LushKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LushKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CAD1816A0B7D4AAC3AB2278 /* Pods_LushKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LushKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D45A7DDB822254944A5F27F /* Pods-LushKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LushKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LushKitUITests/Pods-LushKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73BB5817E22FCDB3ACD6185A /* Pods-LushKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LushKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LushKitTests/Pods-LushKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		81CA930BC460A472B0197F67 /* Pods-LushKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LushKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LushKitUITests/Pods-LushKitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		926CCE8774723314265A50AD /* Pods-LushKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LushKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LushKit/Pods-LushKit.release.xcconfig"; sourceTree = "<group>"; };
+		C027CA5892CCCBA8F036090A /* Pods-LushKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LushKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LushKitTests/Pods-LushKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2523D342EA1BBF92F8CE23EE /* Pods_LushKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A956B4E9773D0E76CEA5C9CF /* Pods_LushKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45D92E435832DEDAF051CDC /* Pods_LushKitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +108,8 @@
 				24F7AD061DF725EF00EF4DF7 /* LushKitTests */,
 				24F7AD111DF725EF00EF4DF7 /* LushKitUITests */,
 				24F7ACF01DF725EF00EF4DF7 /* Products */,
+				C3817FFD05429811E8657676 /* Pods */,
+				A2F2338CCA94A778B8470C34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +130,7 @@
 				24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */,
 				24F7AD201DF7268A00EF4DF7 /* Constants.swift */,
 				24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */,
+				24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */,
 				24F7AD241DF9D42500EF4DF7 /* Buttons */,
 				24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */,
 				24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */,
@@ -164,6 +184,29 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		A2F2338CCA94A778B8470C34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				479D5CED2EB9D7A263248BBC /* Pods_LushKit.framework */,
+				3A69D9CEE636927600DB4267 /* Pods_LushKitTests.framework */,
+				4CAD1816A0B7D4AAC3AB2278 /* Pods_LushKitUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3817FFD05429811E8657676 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3342BC35AFA49148995BD0EF /* Pods-LushKit.debug.xcconfig */,
+				926CCE8774723314265A50AD /* Pods-LushKit.release.xcconfig */,
+				C027CA5892CCCBA8F036090A /* Pods-LushKitTests.debug.xcconfig */,
+				73BB5817E22FCDB3ACD6185A /* Pods-LushKitTests.release.xcconfig */,
+				4D45A7DDB822254944A5F27F /* Pods-LushKitUITests.debug.xcconfig */,
+				81CA930BC460A472B0197F67 /* Pods-LushKitUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24F7AD171DF725EF00EF4DF7 /* Build configuration list for PBXNativeTarget "LushKit" */;
 			buildPhases = (
+				4A043C30FA2AE09F10D0BCAC /* [CP] Check Pods Manifest.lock */,
 				24F7ACEB1DF725EF00EF4DF7 /* Sources */,
 				24F7ACEC1DF725EF00EF4DF7 /* Frameworks */,
 				24F7ACED1DF725EF00EF4DF7 /* Resources */,
+				B4C28E1116CA3C29B548FF02 /* [CP] Embed Pods Frameworks */,
+				179DCFA0558F005AB9824BC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24F7AD1A1DF725EF00EF4DF7 /* Build configuration list for PBXNativeTarget "LushKitTests" */;
 			buildPhases = (
+				2F4C2B4480BC107D9AEA95D4 /* [CP] Check Pods Manifest.lock */,
 				24F7ACFF1DF725EF00EF4DF7 /* Sources */,
 				24F7AD001DF725EF00EF4DF7 /* Frameworks */,
 				24F7AD011DF725EF00EF4DF7 /* Resources */,
+				B90E1AF2F8D0DBBE743F8F0F /* [CP] Embed Pods Frameworks */,
+				AEE868AC0ACD5E4C26C210AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24F7AD1D1DF725EF00EF4DF7 /* Build configuration list for PBXNativeTarget "LushKitUITests" */;
 			buildPhases = (
+				0E6C1463059B38200EA3CA5C /* [CP] Check Pods Manifest.lock */,
 				24F7AD0A1DF725EF00EF4DF7 /* Sources */,
 				24F7AD0B1DF725EF00EF4DF7 /* Frameworks */,
 				24F7AD0C1DF725EF00EF4DF7 /* Resources */,
+				C672F0174735E97250E8A528 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,17 +284,20 @@
 					24F7ACEE1DF725EF00EF4DF7 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = DJ6N7G9BBD;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					24F7AD021DF725EF00EF4DF7 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = DJ6N7G9BBD;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 24F7ACEE1DF725EF00EF4DF7;
 					};
 					24F7AD0D1DF725EF00EF4DF7 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = DJ6N7G9BBD;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 24F7ACEE1DF725EF00EF4DF7;
 					};
@@ -299,6 +353,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E6C1463059B38200EA3CA5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		179DCFA0558F005AB9824BC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LushKit/Pods-LushKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F4C2B4480BC107D9AEA95D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A043C30FA2AE09F10D0BCAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE868AC0ACD5E4C26C210AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LushKitTests/Pods-LushKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4C28E1116CA3C29B548FF02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LushKit/Pods-LushKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B90E1AF2F8D0DBBE743F8F0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LushKitTests/Pods-LushKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C672F0174735E97250E8A528 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LushKitUITests/Pods-LushKitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24F7ACEB1DF725EF00EF4DF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -307,6 +484,7 @@
 				24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */,
 				24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */,
 				24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */,
+				24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */,
 				24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +627,7 @@
 		};
 		24F7AD181DF725EF00EF4DF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3342BC35AFA49148995BD0EF /* Pods-LushKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJ6N7G9BBD;
@@ -462,6 +641,7 @@
 		};
 		24F7AD191DF725EF00EF4DF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926CCE8774723314265A50AD /* Pods-LushKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJ6N7G9BBD;
@@ -475,6 +655,7 @@
 		};
 		24F7AD1B1DF725EF00EF4DF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C027CA5892CCCBA8F036090A /* Pods-LushKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +671,7 @@
 		};
 		24F7AD1C1DF725EF00EF4DF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73BB5817E22FCDB3ACD6185A /* Pods-LushKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +687,7 @@
 		};
 		24F7AD1E1DF725EF00EF4DF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D45A7DDB822254944A5F27F /* Pods-LushKitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DJ6N7G9BBD;
@@ -519,6 +702,7 @@
 		};
 		24F7AD1F1DF725EF00EF4DF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81CA930BC460A472B0197F67 /* Pods-LushKitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DJ6N7G9BBD;

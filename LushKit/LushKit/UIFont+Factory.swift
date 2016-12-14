@@ -18,86 +18,70 @@ public let kFontMiniBodyCopySize: CGFloat   = 11.0
 
 public extension UIFont {
     
-    public class func handwrittenHeading1Font() -> UIFont {
+    public class var heading1Font: UIFont {
         
-        let font = UIFont.handwrittenBoldFontWithSize(size: kFontHeading1Size)
-        
-        return font
+        return UIFont.boldFont(size: kFontHeading1Size)
     }
     
-    public class func heading1Font() -> UIFont {
+    public class var handwrittenHeading1Font: UIFont {
         
-        let font = UIFont.boldFontWithSize(size: kFontHeading1Size)
-        
-        return font
+        return UIFont.handwrittenBoldFont(size: kFontHeading1Size)
     }
     
-    public class func heading2Font() -> UIFont {
+    public class var heading2Font: UIFont {
         
-        let font = UIFont.boldFontWithSize(size: kFontHeading2Size)
-        
-        return font
+        return UIFont.boldFont(size: kFontHeading2Size)
     }
     
-    public class func handwrittenHeading2Font() -> UIFont {
+    public class var handwrittenHeading2Font: UIFont {
         
-        let font = UIFont.handwrittenBoldFontWithSize(size: kFontHeading2Size)
-        
-        return font
+        return UIFont.handwrittenBoldFont(size: kFontHeading2Size)
     }
     
-    public class func heading3Font() -> UIFont {
+    public class var heading3Font: UIFont {
         
-        let font = UIFont.boldFontWithSize(size: kFontHeading3Size)
-        
-        return font
+        return UIFont.boldFont(size: kFontHeading3Size)
     }
     
-    public class func handwrittenHeading3Font() -> UIFont {
+    public class var handwrittenHeading3Font: UIFont {
         
-        let font = UIFont.handwrittenBoldFontWithSize(size: kFontHeading3Size)
-        
-        return font
+        return UIFont.handwrittenBoldFont(size: kFontHeading3Size)
     }
     
-    public class func bodyCopyFont() -> UIFont {
+    public class var bodyCopyFont: UIFont {
         
-        let font = UIFont.regularFontWithSize(size: kFontBodyCopySize)
-        
-        return font
+        return UIFont.regularFont(size: kFontBodyCopySize)
     }
     
-    public class func miniBodyCopyFont() -> UIFont {
+    public class var miniBodyCopyFont: UIFont {
         
-        let font = UIFont.regularFontWithSize(size: kFontMiniBodyCopySize)
-        
-        return font
+        return UIFont.regularFont(size: kFontMiniBodyCopySize)
     }
     
     // MARK: - Helper methods
     
-    class func boldFontWithSize(size: CGFloat) -> UIFont {
+    class func boldFont(size: CGFloat) -> UIFont {
         
         let font: UIFont? = UIFont(name: "HelveticaNeue-Bold", size: size)
         
         return font!
     }
     
-    class func regularFontWithSize(size: CGFloat) -> UIFont {
+    class func regularFont(size: CGFloat) -> UIFont {
         
         let font: UIFont? = UIFont(name: "HelveticaNeue", size: size)
         
         return font!
     }
     
-    class func handwrittenBoldFontWithSize(size: CGFloat) -> UIFont {
+    class func handwrittenBoldFont(size: CGFloat) -> UIFont {
         
         let font: UIFont? = UIFont(name: "LushHandwritten-Bold", size: size)
         
         return font!
     }
     
-    class func handwrittenRegularFontWithSize(size: CGFloat) -> UIFont {
+    class func handwrittenRegularFont(size: CGFloat) -> UIFont {
         
         let font: UIFont? = UIFont(name: "LushHandwritten-Regular", size: size)
         
