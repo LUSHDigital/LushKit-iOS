@@ -13,12 +13,13 @@ import UIColor_Hex_Swift
 // constants
 let kLushBlackHexString             = "#000000"
 let kLushDarkGrayHexString          = "#333333"
-let kLushWhiteHexString             = "#FFFFFFF"
+let kLushWhiteHexString             = "#fafbfc"
 let kLushMediumGrayHexString        = "#8F8F8F"
 let kLushLightGrayHexString         = "#CECECE"
 let kLushVeryLightGrayHexString     = "#EAEAEA"
 let kLushGreenHexString             = "#00A44C"
 let kLushRedHexString               = "#D0021B"
+let kLushYellowHexString            = "#F6A623"
 
 public extension UIColor {
     
@@ -60,5 +61,10 @@ public extension UIColor {
     public class var lushRed: UIColor {
         
         return UIColor(kLushRedHexString)
+    }
+    
+    public class var lushYellow: UIColor {
+        
+        return UIColor(kLushYellowHexString)
     }
 }

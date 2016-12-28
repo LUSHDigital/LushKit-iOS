@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     var colorViews = [UIView]()
     var colorLabels = [UILabel]()
     var fontLabels = [UILabel]()
+    var rectangularButtons = [RectangularButton]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.lushWhite
         automaticallyAdjustsScrollViewInsets = false
         
         scrollView = UIScrollView(frame: CGRect.zero)
@@ -33,14 +34,15 @@ class ViewController: UIViewController {
         
         addColorViewsAndLabels()
         addFontLabels()
+        addRectangularButtons()
         
         addConstraints()
     }
     
     func addColorViewsAndLabels() {
         
-        let colors: [UIColor] = [.lushBlack, .lushDarkGray, .lushWhite, .lushMediumGray, .lushVeryLightGray, .lushLightGray, .lushGreen, .lushRed]
-        let colorStrings = [kLushBlackHexString, kLushDarkGrayHexString, kLushWhiteHexString, kLushMediumGrayHexString, kLushVeryLightGrayHexString, kLushLightGrayHexString, kLushGreenHexString, kLushRedHexString]
+        let colors: [UIColor] = [.lushBlack, .lushDarkGray, .lushWhite, .lushMediumGray, .lushVeryLightGray, .lushLightGray, .lushGreen, .lushRed, .lushYellow]
+        let colorStrings = [kLushBlackHexString, kLushDarkGrayHexString, kLushWhiteHexString, kLushMediumGrayHexString, kLushVeryLightGrayHexString, kLushLightGrayHexString, kLushGreenHexString, kLushRedHexString, kLushYellowHexString]
         
         for (index, string) in colorStrings.enumerated() {
             
@@ -86,6 +88,29 @@ class ViewController: UIViewController {
             
             contentView.addSubview(label)
         }
+    }
+    
+    func addRectangularButtons() {
+        
+        let primaryButton = RectangularButton.primaryButton()
+        primaryButton.setTitle("Primary Button", for: .normal)
+        rectangularButtons.append(primaryButton)
+        contentView.addSubview(primaryButton)
+        
+        let secondaryButton = RectangularButton.secondaryButton()
+        secondaryButton.setTitle("Secondary Button", for: .normal)
+        rectangularButtons.append(secondaryButton)
+        contentView.addSubview(secondaryButton)
+        
+        let tertiaryPositiveButton = RectangularButton.tertiaryPositiveButton()
+        tertiaryPositiveButton.setTitle("Tertiary Positive Button", for: .normal)
+        rectangularButtons.append(tertiaryPositiveButton)
+        contentView.addSubview(tertiaryPositiveButton)
+        
+        let tertiaryNegativeButton = RectangularButton.tertiaryNegativeButton()
+        tertiaryNegativeButton.setTitle("Tertiary Negative Button", for: .normal)
+        rectangularButtons.append(tertiaryNegativeButton)
+        contentView.addSubview(tertiaryNegativeButton)
     }
     
     func addConstraints() {
@@ -224,10 +249,6 @@ class ViewController: UIViewController {
                     label.addTopConstraint(toView: previousLabel, attribute: .bottom, relation: .equal, constant: kDoubleMargin)
                 }
                 
-                // add bottom constraint
-                
-                label.addBottomConstraint(toView: label.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
-                
             } else {
                 
                 // all intermediate labels: add top constraint only
@@ -241,6 +262,41 @@ class ViewController: UIViewController {
             
             label.addLeadingConstraint(toView: label.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
             label.addTrailingConstraint(toView: label.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
+        }
+        
+        // Rectangular Buttons
+        
+        for (index, button) in rectangularButtons.enumerated() {
+            
+            button.translatesAutoresizingMaskIntoConstraints = false
+            
+            // add top constraint
+            
+            if index == 0 {
+                
+                // first button
+                button.addTopConstraint(toView: fontLabels.last, attribute: .bottom, relation: .equal, constant: kDoubleMargin)
+                
+            } else {
+                
+                // all other buttons pin to previous button
+                
+                let previousButton = rectangularButtons[index - 1]
+                
+                button.addTopConstraint(toView: previousButton, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
+            }
+            
+            // add bottom constraint to last button
+            
+            if index == (rectangularButtons.count - 1) {
+                
+                button.addBottomConstraint(toView: button.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
+            }
+            
+            // apply leading and trailing constraints to all buttons
+            
+            button.addLeadingConstraint(toView: button.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
+            button.addTrailingConstraint(toView: button.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
         }
     }
     

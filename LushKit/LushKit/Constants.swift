@@ -30,8 +30,8 @@ public let kDefaultPickerViewRowHeight: CGFloat        = 50.0
 
 // borders
 public let kHalfPixel: CGFloat                         = (1.0 / UIScreen.main.scale)
+public let kDefaultBorderWidth: CGFloat                = 1.0
 public let kDoubleBorderWidth: CGFloat                 = 2.0
-public let kDefaultBorderWidth: CGFloat                = 3.0
 public let kBorderViewDefaultHeight: CGFloat           = kHalfPixel
 
 // shading

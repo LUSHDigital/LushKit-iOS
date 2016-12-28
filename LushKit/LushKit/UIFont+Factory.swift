@@ -15,6 +15,7 @@ public let kFontHeading2Size: CGFloat       = 23.0
 public let kFontHeading3Size: CGFloat       = 18.0
 public let kFontBodyCopySize: CGFloat       = 14.0
 public let kFontMiniBodyCopySize: CGFloat   = 11.0
+public let kFontButtonTextSize: CGFloat     = 11.0
 
 public extension UIFont {
     
@@ -58,6 +59,11 @@ public extension UIFont {
         return UIFont.regularFont(size: kFontMiniBodyCopySize)
     }
     
+    public class var buttonFont: UIFont {
+        
+        return UIFont.mediumFont(size: kFontButtonTextSize)
+    }
+    
     // MARK: - Helper methods
     
     class func boldFont(size: CGFloat) -> UIFont {
@@ -70,6 +76,13 @@ public extension UIFont {
     class func regularFont(size: CGFloat) -> UIFont {
         
         let font: UIFont? = UIFont(name: "HelveticaNeue", size: size)
+        
+        return font!
+    }
+    
+    class func mediumFont(size: CGFloat) -> UIFont {
+        
+        let font: UIFont? = UIFont(name: "HelveticaNeue-Medium", size: size)
         
         return font!
     }

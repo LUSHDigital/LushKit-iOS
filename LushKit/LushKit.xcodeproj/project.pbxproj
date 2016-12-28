@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244B5A1C1E13E51100E9C5C2 /* RectangularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */; };
+		244B5A1E1E13E54D00E9C5C2 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */; };
+		244B5A201E14224800E9C5C2 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */; };
 		24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */; };
 		24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */; };
 		24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectangularButton.swift; path = Buttons/RectangularButton.swift; sourceTree = "<group>"; };
+		244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseButton.swift; path = Buttons/BaseButton.swift; sourceTree = "<group>"; };
+		244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Additions.swift"; path = "Buttons/UIButton+Additions.swift"; sourceTree = "<group>"; };
 		24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Factory.swift"; sourceTree = "<group>"; };
 		24F7ACEF1DF725EF00EF4DF7 /* LushKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LushKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 		24F7AD241DF9D42500EF4DF7 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */,
+				244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */,
+				244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -484,8 +493,11 @@
 				24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */,
 				24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */,
 				24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */,
+				244B5A1E1E13E54D00E9C5C2 /* BaseButton.swift in Sources */,
+				244B5A1C1E13E51100E9C5C2 /* RectangularButton.swift in Sources */,
 				24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */,
 				24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */,
+				244B5A201E14224800E9C5C2 /* UIButton+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
