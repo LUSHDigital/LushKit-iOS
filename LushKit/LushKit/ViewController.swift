@@ -92,22 +92,22 @@ class ViewController: UIViewController {
     
     func addRectangularButtons() {
         
-        let primaryButton = RectangularButton.primaryButton()
+        let primaryButton = RectangularButton(style: .Primary)
         primaryButton.setTitle("Primary Button", for: .normal)
         rectangularButtons.append(primaryButton)
         contentView.addSubview(primaryButton)
         
-        let secondaryButton = RectangularButton.secondaryButton()
+        let secondaryButton = RectangularButton(style: .Secondary)
         secondaryButton.setTitle("Secondary Button", for: .normal)
         rectangularButtons.append(secondaryButton)
         contentView.addSubview(secondaryButton)
         
-        let tertiaryPositiveButton = RectangularButton.tertiaryPositiveButton()
+        let tertiaryPositiveButton = RectangularButton(style: .TertiaryPositive)
         tertiaryPositiveButton.setTitle("Tertiary Positive Button", for: .normal)
         rectangularButtons.append(tertiaryPositiveButton)
         contentView.addSubview(tertiaryPositiveButton)
         
-        let tertiaryNegativeButton = RectangularButton.tertiaryNegativeButton()
+        let tertiaryNegativeButton = RectangularButton(style: .TertiaryNegative)
         tertiaryNegativeButton.setTitle("Tertiary Negative Button", for: .normal)
         rectangularButtons.append(tertiaryNegativeButton)
         contentView.addSubview(tertiaryNegativeButton)

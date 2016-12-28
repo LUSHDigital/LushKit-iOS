@@ -66,41 +66,19 @@ public class RectangularButton: BaseButton {
         }
     }
     
-    // MARK: - Factory
     
-    /// Returns a RectangularButton with black background and white font.
-    public class func primaryButton() -> RectangularButton {
+    // MARK: - Initializer
+    
+    public init(style buttonStyle: RectangularButtonStyle) {
         
-        let button = RectangularButton()
+        self.buttonStyle = buttonStyle
         
-        return button
+        super.init(frame: CGRect.zero)
     }
     
-    /// Returns a RectangularButton with a black border, white background, and black font.
-    public class func secondaryButton() -> RectangularButton {
+    required public init?(coder aDecoder: NSCoder) {
         
-        let button = RectangularButton()
-        button.buttonStyle = .Secondary
-        
-        return button
-    }
-    
-    /// Returns a RectangularButton with green background and white font.
-    public class func tertiaryPositiveButton() -> RectangularButton {
-        
-        let button = RectangularButton()
-        button.buttonStyle = .TertiaryPositive
-        
-        return button
-    }
-    
-    /// Returns a RectangularButton with red background and white font.
-    public class func tertiaryNegativeButton() -> RectangularButton {
-        
-        let button = RectangularButton()
-        button.buttonStyle = .TertiaryNegative
-        
-        return button
+        super.init(coder: aDecoder)
     }
     
     
