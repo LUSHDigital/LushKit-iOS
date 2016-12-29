@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var colorLabels = [UILabel]()
     var fontLabels = [UILabel]()
     var rectangularButtons = [RectangularButton]()
+    var quantityStepper: QuantityStepper!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         addColorViewsAndLabels()
         addFontLabels()
         addRectangularButtons()
+        addQuantityStepper()
         
         addConstraints()
     }
@@ -111,6 +113,12 @@ class ViewController: UIViewController {
         tertiaryNegativeButton.setTitle("Tertiary Negative Button", for: .normal)
         rectangularButtons.append(tertiaryNegativeButton)
         contentView.addSubview(tertiaryNegativeButton)
+    }
+    
+    func addQuantityStepper() {
+        
+        quantityStepper = QuantityStepper()
+        contentView.addSubview(quantityStepper)
     }
     
     func addConstraints() {
@@ -286,18 +294,20 @@ class ViewController: UIViewController {
                 button.addTopConstraint(toView: previousButton, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
             }
             
-            // add bottom constraint to last button
-            
-            if index == (rectangularButtons.count - 1) {
-                
-                button.addBottomConstraint(toView: button.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
-            }
-            
             // apply leading and trailing constraints to all buttons
             
             button.addLeadingConstraint(toView: button.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
             button.addTrailingConstraint(toView: button.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
         }
+        
+        // Quantity stepper
+        
+        quantityStepper.translatesAutoresizingMaskIntoConstraints = false
+        
+        quantityStepper.addTopConstraint(toView: rectangularButtons.last, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
+        quantityStepper.addLeadingConstraint(toView: quantityStepper.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
+        quantityStepper.addTrailingConstraint(toView: quantityStepper.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
+        quantityStepper.addBottomConstraint(toView: quantityStepper.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
     }
     
     override func updateViewConstraints() {

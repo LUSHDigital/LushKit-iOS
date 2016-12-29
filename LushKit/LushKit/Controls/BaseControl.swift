@@ -1,21 +1,20 @@
 //
-//  BaseButton.swift
+//  BaseControl.swift
 //  LushKit
 //
-//  Created by Ashley Cabico on 28/12/2016.
+//  Created by Ashley Cabico on 29/12/2016.
 //  Copyright © 2016 Lush Ltd. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public class BaseButton: UIButton {
+public class BaseControl: UIControl {
     
-    override public var isEnabled: Bool {
+    public override var isEnabled: Bool {
         
         didSet {
-            
-            updateButtonState()
+            updateControlState()
         }
     }
     
@@ -74,7 +73,7 @@ public class BaseButton: UIButton {
     // MARK: - Update State
     
     /// Abstract method. Subclasses should override this method to change button appearance according to isEnabled state.
-    public func updateButtonState() {
+    public func updateControlState() {
         
     }
 }

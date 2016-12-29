@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreGraphics
 
+
 /**
  Use to set button appearance. For a stack of two buttons, use Primary for the top button and Secondary for the bottom.
  
@@ -84,7 +85,7 @@ public class RectangularButton: BaseButton {
     
     // MARK: - Setup
     
-    override func setup() {
+    override public func setup() {
         
         super.setup()
         
@@ -149,7 +150,7 @@ public class RectangularButton: BaseButton {
     
     // MARK: - Update state
     
-    override func updateButtonState() {
+    override public func updateButtonState() {
         
         if isEnabled {
             
@@ -171,6 +172,7 @@ public class RectangularButton: BaseButton {
             setTitleColor(UIColor.lushLightGray, for: .normal)
         }
     }
+    
     
     // MARK: - Content size
     
