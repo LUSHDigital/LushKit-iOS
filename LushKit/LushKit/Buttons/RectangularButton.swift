@@ -92,7 +92,7 @@ public class RectangularButton: BaseButton {
         updateAppearance()
     }
     
-    private func setupAppearance() {
+    fileprivate func setupAppearance() {
         
         titleLabel?.font = UIFont.buttonFont
         
@@ -113,7 +113,7 @@ public class RectangularButton: BaseButton {
         super.setTitle(uppercaseTitle, for: state)
     }
     
-    private func updateAppearance() {
+    fileprivate func updateAppearance() {
         
         switch buttonStyle {
             

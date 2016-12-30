@@ -21,11 +21,11 @@ public class FormInputView: BaseView {
     
     public var fieldDescription: String?
     
-    public private(set) var textField: FormTextField!
+    public fileprivate(set) var textField: FormTextField!
     
     // MARK: - Private properties
     
-    private var descriptionLabel: UILabel?
+    fileprivate var descriptionLabel: UILabel?
     
     
     // MARK: - Initializer
@@ -54,7 +54,7 @@ public class FormInputView: BaseView {
         setupTextField()
     }
     
-    private func setupDescriptionLabel() {
+    fileprivate func setupDescriptionLabel() {
         
         guard let fieldDescription = fieldDescription else {
             return
@@ -71,7 +71,7 @@ public class FormInputView: BaseView {
         addSubview(descriptionLabel!)
     }
     
-    private func setupTextField() {
+    fileprivate func setupTextField() {
         
         textField = FormTextField(validator: validator)
         

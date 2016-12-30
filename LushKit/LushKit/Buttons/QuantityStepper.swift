@@ -60,9 +60,9 @@ public class QuantityStepper: BaseControl {
     
     // MARK: - Private properties
     
-    private var decrementButton: UIButton!
-    private var incrementButton: UIButton!
-    private var valueLabel: UILabel!
+    fileprivate var decrementButton: UIButton!
+    fileprivate var incrementButton: UIButton!
+    fileprivate var valueLabel: UILabel!
     
     
     // MARK: - Setup
@@ -81,7 +81,7 @@ public class QuantityStepper: BaseControl {
         updateAppearance()
     }
     
-    private func setupDecrementButton() {
+    fileprivate func setupDecrementButton() {
         
         decrementButton = UIButton()
         decrementButton.setImage(UIImage(named: "minus"), for: .normal)
@@ -90,7 +90,7 @@ public class QuantityStepper: BaseControl {
         decrementButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
     }
     
-    private func setupIncrementButton() {
+    fileprivate func setupIncrementButton() {
         
         incrementButton = UIButton()
         incrementButton.setImage(UIImage(named: "plus"), for: .normal)
@@ -99,7 +99,7 @@ public class QuantityStepper: BaseControl {
         incrementButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
     }
     
-    private func setupValueLabel() {
+    fileprivate func setupValueLabel() {
         
         valueLabel = UILabel()
         valueLabel.font = UIFont.bodyCopyFont
@@ -124,7 +124,7 @@ public class QuantityStepper: BaseControl {
         setupIncrementButtonConstraints()
     }
     
-    private func setupDecrementButtonConstraints() {
+    fileprivate func setupDecrementButtonConstraints() {
         
         decrementButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -135,7 +135,7 @@ public class QuantityStepper: BaseControl {
         decrementButton.addWidthConstraint(toView: nil, constant: kDefaultButtonWidth)
     }
     
-    private func setupIncrementButtonConstraints() {
+    fileprivate func setupIncrementButtonConstraints() {
         
         incrementButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -147,7 +147,7 @@ public class QuantityStepper: BaseControl {
         incrementButton.addWidthConstraint(toView: nil, constant: kDefaultButtonWidth)
     }
     
-    private func setupValueLabelConstraints() {
+    fileprivate func setupValueLabelConstraints() {
         
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -159,7 +159,7 @@ public class QuantityStepper: BaseControl {
     
     // MARK: - Appearance
     
-    private func updateAppearance() {
+    fileprivate func updateAppearance() {
         
         valueLabel.text = String(value)
         
@@ -172,7 +172,7 @@ public class QuantityStepper: BaseControl {
     
     // MARK: - Actions
     
-    @objc private func buttonPressed(button: UIButton) {
+    @objc fileprivate func buttonPressed(button: UIButton) {
         
         var newValue = value
         

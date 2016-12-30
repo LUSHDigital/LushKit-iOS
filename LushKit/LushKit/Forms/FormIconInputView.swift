@@ -37,7 +37,7 @@ public class FormIconInputView: FormInputView {
         setupIcon()
     }
     
-    private func setupIcon() {
+    fileprivate func setupIcon() {
         
         textField.leftView = UIImageView(image: icon)
         textField.leftViewMode = .always
