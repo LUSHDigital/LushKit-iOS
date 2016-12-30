@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2421D0401E16C92F00AEC6B5 /* FormIconInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2421D03F1E16C92F00AEC6B5 /* FormIconInputView.swift */; };
 		244B5A1C1E13E51100E9C5C2 /* RectangularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */; };
 		244B5A1E1E13E54D00E9C5C2 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */; };
 		244B5A201E14224800E9C5C2 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */; };
 		244B5A221E1517ED00E9C5C2 /* QuantityStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A211E1517ED00E9C5C2 /* QuantityStepper.swift */; };
 		244B5A241E151B6700E9C5C2 /* BaseControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A231E151B6700E9C5C2 /* BaseControl.swift */; };
+		244B5A2A1E169CF000E9C5C2 /* FormInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A291E169CF000E9C5C2 /* FormInputView.swift */; };
+		244B5A2C1E16A8F600E9C5C2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A2B1E16A8F600E9C5C2 /* BaseView.swift */; };
+		244B5A2E1E16ABEB00E9C5C2 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A2D1E16ABEB00E9C5C2 /* FormTextField.swift */; };
 		24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */; };
 		24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */; };
 		24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7ACF41DF725EF00EF4DF7 /* ViewController.swift */; };
@@ -48,11 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2421D03F1E16C92F00AEC6B5 /* FormIconInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormIconInputView.swift; path = LushKit/Forms/FormIconInputView.swift; sourceTree = "<group>"; };
 		244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectangularButton.swift; path = Buttons/RectangularButton.swift; sourceTree = "<group>"; };
 		244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseButton.swift; path = Buttons/BaseButton.swift; sourceTree = "<group>"; };
 		244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Additions.swift"; path = "Buttons/UIButton+Additions.swift"; sourceTree = "<group>"; };
 		244B5A211E1517ED00E9C5C2 /* QuantityStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuantityStepper.swift; path = Buttons/QuantityStepper.swift; sourceTree = "<group>"; };
 		244B5A231E151B6700E9C5C2 /* BaseControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseControl.swift; path = Controls/BaseControl.swift; sourceTree = "<group>"; };
+		244B5A291E169CF000E9C5C2 /* FormInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormInputView.swift; path = LushKit/Forms/FormInputView.swift; sourceTree = "<group>"; };
+		244B5A2B1E16A8F600E9C5C2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		244B5A2D1E16ABEB00E9C5C2 /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormTextField.swift; path = LushKit/Forms/FormTextField.swift; sourceTree = "<group>"; };
 		24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Factory.swift"; sourceTree = "<group>"; };
 		24F7ACEF1DF725EF00EF4DF7 /* LushKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LushKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F7ACF21DF725EF00EF4DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +128,17 @@
 			name = Controls;
 			sourceTree = "<group>";
 		};
+		244B5A261E16852300E9C5C2 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				244B5A291E169CF000E9C5C2 /* FormInputView.swift */,
+				2421D03F1E16C92F00AEC6B5 /* FormIconInputView.swift */,
+				244B5A2D1E16ABEB00E9C5C2 /* FormTextField.swift */,
+			);
+			name = Forms;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		24F7ACE61DF725EF00EF4DF7 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +169,10 @@
 				24F7AD201DF7268A00EF4DF7 /* Constants.swift */,
 				24F7AD221DF72A1F00EF4DF7 /* UIFont+Factory.swift */,
 				24DFD22D1E01556300EB91FB /* UIColor+Factory.swift */,
+				244B5A2B1E16A8F600E9C5C2 /* BaseView.swift */,
 				24F7AD241DF9D42500EF4DF7 /* Buttons */,
 				244B5A251E151B6C00E9C5C2 /* Controls */,
+				244B5A261E16852300E9C5C2 /* Forms */,
 				24F7ACF91DF725EF00EF4DF7 /* Assets.xcassets */,
 				24F7ACFB1DF725EF00EF4DF7 /* LaunchScreen.storyboard */,
 				24F7AD251DFEC03500EF4DF7 /* Resources */,
@@ -507,11 +528,15 @@
 				24F7ACF51DF725EF00EF4DF7 /* ViewController.swift in Sources */,
 				24F7ACF31DF725EF00EF4DF7 /* AppDelegate.swift in Sources */,
 				244B5A221E1517ED00E9C5C2 /* QuantityStepper.swift in Sources */,
+				244B5A2C1E16A8F600E9C5C2 /* BaseView.swift in Sources */,
+				2421D0401E16C92F00AEC6B5 /* FormIconInputView.swift in Sources */,
 				24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */,
+				244B5A2A1E169CF000E9C5C2 /* FormInputView.swift in Sources */,
 				244B5A241E151B6700E9C5C2 /* BaseControl.swift in Sources */,
 				244B5A1E1E13E54D00E9C5C2 /* BaseButton.swift in Sources */,
 				244B5A1C1E13E51100E9C5C2 /* RectangularButton.swift in Sources */,
 				24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */,
+				244B5A2E1E16ABEB00E9C5C2 /* FormTextField.swift in Sources */,
 				24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */,
 				244B5A201E14224800E9C5C2 /* UIButton+Additions.swift in Sources */,
 			);
@@ -578,6 +603,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -628,6 +654,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -657,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3342BC35AFA49148995BD0EF /* Pods-LushKit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJ6N7G9BBD;
 				INFOPLIST_FILE = LushKit/Info.plist;
@@ -671,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 926CCE8774723314265A50AD /* Pods-LushKit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJ6N7G9BBD;
 				INFOPLIST_FILE = LushKit/Info.plist;

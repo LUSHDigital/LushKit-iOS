@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreGraphics
 import UIKit
 
 // margins

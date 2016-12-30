@@ -1,15 +1,18 @@
 PODS:
   - AutoLayoutHelperSwift (1.0.2)
+  - FormValidatorSwift (1.1.0)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - AutoLayoutHelperSwift (~> 1.0.2)
+  - FormValidatorSwift (~> 1.0)
   - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
   AutoLayoutHelperSwift: 61d0bb3d246937b074e79d1b0829c2812eea7819
+  FormValidatorSwift: 0bc12c10ec2e3618d8a872f8950f46806e7c69f3
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 204af54eafdff2e1acc11caa70cb14f642040b4d
+PODFILE CHECKSUM: 97b882bad53a2121f38af2a02ed2ff1f37220ecf
 
 COCOAPODS: 1.0.1

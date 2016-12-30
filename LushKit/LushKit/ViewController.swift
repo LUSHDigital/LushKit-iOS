@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import CoreGraphics
 import AutoLayoutHelperSwift
+import FormValidatorSwift
 
 class ViewController: UIViewController {
     
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var fontLabels = [UILabel]()
     var rectangularButtons = [RectangularButton]()
     var quantityStepper: QuantityStepper!
+    var formInputViews = [FormInputView]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         addFontLabels()
         addRectangularButtons()
         addQuantityStepper()
+        addFormInputViews()
         
         addConstraints()
     }
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
             let label = UILabel(frame: CGRect.zero)
             label.font = UIFont.miniBodyCopyFont
             label.text = string
+            label.textColor = UIColor.lushDarkGray
             colorLabels.append(label)
             contentView.addSubview(label)
         }
@@ -86,6 +89,7 @@ class ViewController: UIViewController {
             label.font = fonts[index]
             label.lineBreakMode = .byWordWrapping
             label.numberOfLines = 0
+            label.textColor = UIColor.lushDarkGray
             fontLabels.append(label)
             
             contentView.addSubview(label)
@@ -119,6 +123,26 @@ class ViewController: UIViewController {
         
         quantityStepper = QuantityStepper()
         contentView.addSubview(quantityStepper)
+    }
+    
+    func addFormInputViews() {
+        
+        let input1 = FormInputView(validator: AlphabeticValidator(), isMandatory: false)
+        input1.textField.placeholder = "Alphabetic field"
+        formInputViews.append(input1)
+        contentView.addSubview(input1)
+        
+        let input2 = FormInputView(validator: EmailValidator(), isMandatory: false, fieldDescription: "Email")
+        input2.textField.placeholder = "Enter email"
+        input2.textField.shouldAllowViolation = true
+        input2.textField.validateOnFocusLossOnly = true
+        formInputViews.append(input2)
+        contentView.addSubview(input2)
+        
+        let input3 = FormIconInputView(validator: AlphabeticValidator(), icon: UIImage(named: "search")!, isMandatory: false)
+        input3.textField.placeholder = "Enter search term"
+        formInputViews.append(input3)
+        contentView.addSubview(input3)
     }
     
     func addConstraints() {
@@ -307,7 +331,41 @@ class ViewController: UIViewController {
         quantityStepper.addTopConstraint(toView: rectangularButtons.last, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
         quantityStepper.addLeadingConstraint(toView: quantityStepper.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
         quantityStepper.addTrailingConstraint(toView: quantityStepper.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
-        quantityStepper.addBottomConstraint(toView: quantityStepper.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
+        
+        // Form input views
+        
+        for (index, view) in formInputViews.enumerated() {
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+            
+            // add top constraint
+            
+            if index == 0 {
+                
+                // first view
+                view.addTopConstraint(toView: quantityStepper, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
+                
+            } else {
+                
+                // all other views pin to previous view
+                
+                let previousView = formInputViews[index - 1]
+                
+                view.addTopConstraint(toView: previousView, attribute: .bottom, relation: .equal, constant: kDefaultMargin)
+            }
+            
+            // add bottom constraint if last view
+            
+            if index == (formInputViews.count - 1) {
+                
+                view.addBottomConstraint(toView: view.superview, attribute: .bottom, relation: .equal, constant: -kDefaultMargin)
+            }
+            
+            // apply leading and trailing constraints to all buttons
+            
+            view.addLeadingConstraint(toView: view.superview, attribute: .leading, relation: .equal, constant: kDefaultMargin)
+            view.addTrailingConstraint(toView: view.superview, attribute: .trailing, relation: .equal, constant: -kDefaultMargin)
+        }
     }
     
     override func updateViewConstraints() {
