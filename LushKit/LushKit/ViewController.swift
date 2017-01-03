@@ -143,6 +143,16 @@ class ViewController: UIViewController {
         input3.textField.placeholder = "Enter search term"
         formInputViews.append(input3)
         contentView.addSubview(input3)
+        
+        let input4 = FormInputWithClearButtonView(validator: AlphanumericValidator(), isMandatory: false, fieldDescription: "Clear button")
+        input4.textField.placeholder = "Start typing to show clear button"
+        formInputViews.append(input4)
+        contentView.addSubview(input4)
+        
+        let input5 = FormInputWithButtonView(validator: AlphanumericValidator(), buttonTitle: "Send", isMandatory: false)
+        input5.textField.placeholder = "Enter text..."
+        formInputViews.append(input5)
+        contentView.addSubview(input5)
     }
     
     func addConstraints() {

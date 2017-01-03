@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2421D0401E16C92F00AEC6B5 /* FormIconInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2421D03F1E16C92F00AEC6B5 /* FormIconInputView.swift */; };
+		2421D0421E1C192000AEC6B5 /* FormInputWithClearButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2421D0411E1C192000AEC6B5 /* FormInputWithClearButtonView.swift */; };
+		2421D0441E1C364900AEC6B5 /* FormInputWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2421D0431E1C364900AEC6B5 /* FormInputWithButtonView.swift */; };
 		244B5A1C1E13E51100E9C5C2 /* RectangularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */; };
 		244B5A1E1E13E54D00E9C5C2 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */; };
 		244B5A201E14224800E9C5C2 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		2421D03F1E16C92F00AEC6B5 /* FormIconInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormIconInputView.swift; path = LushKit/Forms/FormIconInputView.swift; sourceTree = "<group>"; };
+		2421D0411E1C192000AEC6B5 /* FormInputWithClearButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormInputWithClearButtonView.swift; path = LushKit/Forms/FormInputWithClearButtonView.swift; sourceTree = "<group>"; };
+		2421D0431E1C364900AEC6B5 /* FormInputWithButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormInputWithButtonView.swift; path = LushKit/Forms/FormInputWithButtonView.swift; sourceTree = "<group>"; };
 		244B5A1B1E13E51100E9C5C2 /* RectangularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectangularButton.swift; path = Buttons/RectangularButton.swift; sourceTree = "<group>"; };
 		244B5A1D1E13E54D00E9C5C2 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseButton.swift; path = Buttons/BaseButton.swift; sourceTree = "<group>"; };
 		244B5A1F1E14224800E9C5C2 /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Additions.swift"; path = "Buttons/UIButton+Additions.swift"; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				244B5A291E169CF000E9C5C2 /* FormInputView.swift */,
 				2421D03F1E16C92F00AEC6B5 /* FormIconInputView.swift */,
 				244B5A2D1E16ABEB00E9C5C2 /* FormTextField.swift */,
+				2421D0411E1C192000AEC6B5 /* FormInputWithClearButtonView.swift */,
+				2421D0431E1C364900AEC6B5 /* FormInputWithButtonView.swift */,
 			);
 			name = Forms;
 			path = ..;
@@ -533,12 +539,14 @@
 				24F7AD211DF7268A00EF4DF7 /* Constants.swift in Sources */,
 				244B5A2A1E169CF000E9C5C2 /* FormInputView.swift in Sources */,
 				244B5A241E151B6700E9C5C2 /* BaseControl.swift in Sources */,
+				2421D0421E1C192000AEC6B5 /* FormInputWithClearButtonView.swift in Sources */,
 				244B5A1E1E13E54D00E9C5C2 /* BaseButton.swift in Sources */,
 				244B5A1C1E13E51100E9C5C2 /* RectangularButton.swift in Sources */,
 				24DFD22E1E01556300EB91FB /* UIColor+Factory.swift in Sources */,
 				244B5A2E1E16ABEB00E9C5C2 /* FormTextField.swift in Sources */,
 				24F7AD231DF72A1F00EF4DF7 /* UIFont+Factory.swift in Sources */,
 				244B5A201E14224800E9C5C2 /* UIButton+Additions.swift in Sources */,
+				2421D0441E1C364900AEC6B5 /* FormInputWithButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

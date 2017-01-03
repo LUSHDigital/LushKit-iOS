@@ -61,16 +61,6 @@ public class FormTextField: ValidatorTextField {
         return rect
     }
     
-    public override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        
-        var rect = super.rightViewRect(forBounds: bounds)
-        let insets = UIEdgeInsets(top: 0, left: -kHalfMargin, bottom: 0, right: kHalfMargin)
-        
-        rect = UIEdgeInsetsInsetRect(rect, insets)
-        
-        return rect
-    }
-    
     
     // MARK: - Content size
     
